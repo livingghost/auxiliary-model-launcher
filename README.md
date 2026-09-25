@@ -148,16 +148,45 @@ the endpoint, the key and the model IDs all change together.
    Do not use `setx PATH "%PATH%;..."`. It bakes the merged system PATH into
    your user PATH and can truncate long values.
 
-4. Open a new terminal and verify:
+4. Open a new terminal, then run a shim as shown under Usage below.
 
-   ```
-   claude-kimi       Claude Code on Kimi Code
-   codex-kimi        Codex on Kimi Code
-   claude-glm        Claude Code on GLM
-   codex-glm         Codex on GLM
-   claude            Your existing subscription, unchanged
-   codex             Your existing subscription, unchanged
-   ```
+## Usage
+
+Open any new terminal and run a shim. The shim name is the route name:
+
+```
+claude-kimi          Claude Code on Kimi Code
+codex-kimi           Codex on Kimi Code
+claude-glm           Claude Code on GLM
+codex-glm            Codex on GLM
+claude-deepseek      Claude Code on DeepSeek
+claude-stepfun       Claude Code on StepFun
+claude               Your existing subscription, unchanged
+codex                Your existing subscription, unchanged
+```
+
+A shim is a drop-in replacement for the real command, so pass the arguments
+you always pass:
+
+```
+claude-kimi -p "explain this file"
+claude-glm --resume
+codex-kimi exec "fix the failing tests"
+```
+
+What to expect while a shim runs:
+
+- The tool starts in the directory you launched it from, so it opens the
+  project in your current folder just as `claude` and `codex` would.
+- For the Codex shims, `--profile <route>` is added for you. Do not pass it.
+- Environment variables are set only inside that process. Your shell is
+  untouched, and the unsuffixed `claude` / `codex` commands keep using your
+  existing subscriptions.
+
+If something is missing, the shim exits with the reason instead of starting
+the tool: an unknown route name, a route folder with no `claude.json` /
+`codex.toml`, no `apikey.txt` and no `<NAME>_API_KEY` variable, or a
+`codex.toml` without a top-level `base_url`.
 
 ## Adding a route
 
