@@ -1,0 +1,8 @@
+# Tool-side settings for Codex with the glm route.
+# Native Codex config.toml format.
+# The top-level base_url is launcher-managed: launch.ps1 moves it into the
+# generated provider table. Everything else is passed through verbatim.
+# Do not write a model_provider key here.
+model = "glm-5.3"
+base_url = "https://api.z.ai/api/v1"
+model_context_window = 1048576

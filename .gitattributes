@@ -1,0 +1,4 @@
+# Normalize line endings: LF in the repo and LF in the working tree,
+# except .cmd shims, which check out CRLF for Windows batch.
+* text=auto eol=lf
+*.cmd text eol=crlf

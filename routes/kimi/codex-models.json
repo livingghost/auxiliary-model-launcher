@@ -1,0 +1,156 @@
+{
+  "models": [
+    {
+      "slug": "k3",
+      "display_name": "Kimi K3",
+      "description": "K3 flagship, up to 1M context (via Kimi Code)",
+      "context_window": 1048576,
+      "max_context_window": 1048576,
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses"
+        },
+        {
+          "effort": "high",
+          "description": "Deeper reasoning"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 0,
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "",
+      "supports_reasoning_summaries": true,
+      "support_verbosity": false,
+      "default_verbosity": null,
+      "apply_patch_tool_type": null,
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    },
+    {
+      "slug": "k3-256k",
+      "display_name": "Kimi K3 256k",
+      "description": "K3 with 256k context, lower quota use",
+      "context_window": 262144,
+      "max_context_window": 262144,
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses"
+        },
+        {
+          "effort": "high",
+          "description": "Deeper reasoning"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 1,
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "",
+      "supports_reasoning_summaries": true,
+      "support_verbosity": false,
+      "default_verbosity": null,
+      "apply_patch_tool_type": null,
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    },
+    {
+      "slug": "kimi-for-coding",
+      "display_name": "Kimi for Coding",
+      "description": "K2.8 Preview, rolls over to the latest coding model",
+      "context_window": 1048576,
+      "max_context_window": 1048576,
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses"
+        },
+        {
+          "effort": "high",
+          "description": "Deeper reasoning"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 2,
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "",
+      "supports_reasoning_summaries": true,
+      "support_verbosity": false,
+      "default_verbosity": null,
+      "apply_patch_tool_type": null,
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    },
+    {
+      "slug": "kimi-for-coding-highspeed",
+      "display_name": "Kimi for Coding HighSpeed",
+      "description": "K2.7 Code HighSpeed tier",
+      "context_window": 262144,
+      "max_context_window": 262144,
+      "supported_reasoning_levels": [
+        {
+          "effort": "low",
+          "description": "Fast responses"
+        },
+        {
+          "effort": "high",
+          "description": "Deeper reasoning"
+        },
+        {
+          "effort": "max",
+          "description": "Maximum reasoning depth"
+        }
+      ],
+      "shell_type": "shell_command",
+      "visibility": "list",
+      "supported_in_api": true,
+      "priority": 3,
+      "availability_nux": null,
+      "upgrade": null,
+      "base_instructions": "",
+      "supports_reasoning_summaries": true,
+      "support_verbosity": false,
+      "default_verbosity": null,
+      "apply_patch_tool_type": null,
+      "truncation_policy": {
+        "mode": "tokens",
+        "limit": 10000
+      },
+      "supports_parallel_tool_calls": true,
+      "experimental_supported_tools": []
+    }
+  ]
+}
